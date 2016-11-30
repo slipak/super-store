@@ -1,0 +1,22 @@
+<h1>Home</h1>
+<div class="text-right">
+    <a ui-sref="app.product" class="btn btn-primary"><span class="text-uppercase">add new product</span></a>
+</div>
+<br>
+<div class="row">
+    <div class="col-xs-12 col-sm-4 product text-center" ng-repeat="product in $ctrl.products">
+        <div class="product__media">
+            <img class="product__img" ng-src="{{product.imageUrl}}" alt="">
+        </div>
+        <h4 class="product__title"><a href="#" ui-sref="app.home.product({productId: product._id})">{{product.title}}</a></h4>
+        <strong>
+            {{product._id}}
+        </strong>
+
+        <p class="product__price">{{product.price}}</p>
+        <p>Short description</p>
+        <div class="product__controls">
+            <a href="#" class="btn btn-primary text-uppercase">add to cart</a>
+        </div>
+    </div>
+</div>

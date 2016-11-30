@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <h2>Add new Product</h2>
+        <br>
+        <form enctype="multipart/form-data" ng-submit="$ctrl.submitHandler()">
+            <div class="form-group">
+                <label for="title">Product title</label>
+                <input id="title" type="text" class="form-control" ng-model="$ctrl.productTitle">
+            </div>
+            <div class="form-group">
+                <label for="description">Product description</label>
+                <textarea id="description" class="form-control" ng-model="$ctrl.productDescription"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input id="price" type="text" class="form-control" ng-model="$ctrl.productPrice">
+            </div>
+            <div class="form-group">
+                <label for="files">Upload image</label>
+                <input type="file" id="files">
+
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select class="form-control" id="status">
+                    <option value="active">Active</option>
+                    <option value="disable">Disable</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> category 1
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> category 2
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3"> category 3
+                </label>
+            </div>
+            <button class="btn btn-primary">add new product</button>
+        </form>
+    </div>
+    <!--<div class="col-xs-12 col-sm-6">
+        <h2>Product preview</h2>
+        <br>
+        <img src="" alt="">
+        <h2>{{$ctrl.productTitle}}</h2>
+        <p>{{$ctrl.productDescription}}</p>
+        <p>{{$ctrl.productPrice}}</p>
+    </div>-->
+</div>
